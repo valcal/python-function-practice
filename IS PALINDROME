@@ -1,0 +1,15 @@
+"""
+IS PALINDROME: Write a Python function that checks whether a passed in string is palindrome or not.
+
+Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+"""
+
+def palindrome(s):
+    s = s.replace(" ","")
+    upper_range = int(len(s)/2)+1
+    for position in range(0,upper_range):
+        if s[position] == s[-1 - position]:
+            continue
+        else:
+            return False
+    return True
